@@ -25,4 +25,3 @@ The plugin automatically updates the class names of the elements every time a ``
 
 ## Known issues
 * The calculations will [most likely] fail for elements that use the ```border-box``` box-model.
-* The way the calculations 
