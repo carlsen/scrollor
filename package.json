@@ -1,0 +1,13 @@
+{
+  "name": "scrollor",
+  "author": "Tobias Carlsen",
+  "version": "0.0.1",
+  "description": "A simple plugin that adds classes to DOM-elements based on their position relative to the viewport",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.4.3",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-copy": "~0.4.1"
+  },
+  "license": "MIT"
+}

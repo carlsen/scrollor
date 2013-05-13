@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Scrollor test</title>
+		<meta name="viewport" content="width=device-width" />
+		<style>
+body {
+	position: relative;
+	background: #eee;
+	margin: 0;
+}
+
+section {
+	position: relative;
+	height: 200px;
+	overflow: hidden;
+	margin-top: 10px;
+	font-family: Georgia, serif;
+	font-size: 3em;
+	text-align: center;
+	color: white;
+	line-height: 4em;
+	box-shadow: 0 2px 3px rgba(0,0,0,.5);
+	text-shadow: 1px 2px 3px rgba(0,0,0,.5);
+	max-width: 70%;
+	background-color: #666;
+	margin-left: 15%;
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-webkit-transition: max-width 1s, background-color 1s, margin-left 1s, -webkit-transform 1s;
+	-moz-transition: max-width 1s, background-color 1s, margin-left 1s, -moz-transform 1s;
+	-ms-transition: max-width 1s, background-color 1s, margin-left 1s, -ms-transform 1s;
+	-o-transition: max-width 1s, background-color 1s, margin-left 1s, -o-transform 1s;
+	transition: max-width 1s, background-color 1s, margin-left 1s, transform 1s;
+}
+
+.scrollor-above-viewport {
+	max-width: 50%;
+	background-color: #aaa;
+	margin-left: 5%;
+	-webkit-transform: rotate(-1deg);
+	-moz-transform: rotate(-1deg);
+	-ms-transform: rotate(-1deg);
+	-o-transform: rotate(-1deg);
+	transform: rotate(-1deg);
+}
+
+.scrollor-active {
+	max-width: 70%;
+	background-color: #666;
+	margin-left: 15%;
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+}
+
+.scrollor-below-viewport {
+	max-width: 50%;
+	background-color: #ccc;
+	margin-left: 45%;
+	-webkit-transform: rotate(1deg);
+	-moz-transform: rotate(1deg);
+	-ms-transform: rotate(1deg);
+	-o-transform: rotate(1deg);
+	transform: rotate(1deg);
+}
+
+section:before {
+	content: "." attr(class);
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	z-index: 20000;
+	color: #444;
+	font-size: 10px;
+	line-height: 12px;
+	display: block;
+	text-shadow: none;
+	background: rgba(255,255,255,0.2);
+	padding: 3px;
+}
+		</style>
+	</head>
+	<body>
+		<section>scrollor</section> 
+		<section>…</section> 
+		<section>a</section> 
+		<section>very</section> 
+		<section>simple</section> 
+		<section>demonstration</section> 
+		<section>of</section> 
+		<section>an</section> 
+		<section>early</section> 
+		<section>prototype</section> 
+		<section>$</section>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="dist/scrollor.js"></script>
+		<script>
+$("body").scrollor({
+	selector: "section",
+	throttle: 100,
+	prefix: "scrollor-",
+	mode: "ternary"
+});
+		</script>
+	</body>
+</html>

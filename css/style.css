@@ -1,0 +1,106 @@
+body {
+	position: relative;
+	background: #eee;
+	margin: 0;
+}
+
+section {
+	position: relative;
+	height: 200px;
+	overflow: hidden;
+	margin-top: 10px;
+	font-family: Georgia, serif;
+	font-size: 3em;
+	text-align: center;
+	color: white;
+	line-height: 100px;
+	box-shadow: 0 2px 3px rgba(0,0,0,.5);
+	text-shadow: 1px 2px 3px rgba(0,0,0,.5);
+	max-width: 70%;
+	background-color: #666;
+	margin-left: 15%;
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-webkit-transition: max-width 2s, background-color 2s, margin-left 2s, -webkit-transform 2s;
+	-moz-transition: max-width 2s, background-color 2s, margin-left 2s, -moz-transform 2s;
+	-ms-transition: max-width 2s, background-color 2s, margin-left 2s, -ms-transform 2s;
+	-o-transition: max-width 2s, background-color 2s, margin-left 2s, -o-transform 2s;
+	transition: max-width 2s, background-color 2s, margin-left 2s, transform 2s;
+}
+
+.scrollor-above-viewport {
+	max-width: 30%;
+	background-color: #999;
+	margin-left: 5%;
+	-webkit-transform: rotate(-10deg);
+	-moz-transform: rotate(-10deg);
+	-ms-transform: rotate(-10deg);
+	-o-transform: rotate(-10deg);
+	transform: rotate(-10deg);
+}
+.scrollor-bottom-visible {
+	max-width: 50%;
+	background-color: #aaa;
+	margin-left: 5%;
+	-webkit-transform: rotate(-5deg);
+	-moz-transform: rotate(-5deg);
+	-ms-transform: rotate(-5deg);
+	-o-transform: rotate(-5deg);
+	transform: rotate(-5deg);
+}
+
+.scrollor-active {
+	max-width: 70%;
+	background-color: #666;
+	margin-left: 15%;
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+}
+
+.scrollor-top-visible{
+	max-width: 50%;
+	background-color: #ccc;
+	margin-left: 45%;
+	-webkit-transform: rotate(5deg);
+	-moz-transform: rotate(5deg);
+	-ms-transform: rotate(5deg);
+	-o-transform: rotate(5deg);
+	transform: rotate(5deg);
+}
+
+.scrollor-below-viewport {
+	max-width: 30%;
+	background-color: #ddd;
+	margin-left: 65%;
+	-webkit-transform: rotate(10deg);
+	-moz-transform: rotate(10deg);
+	-ms-transform: rotate(10deg);
+	-o-transform: rotate(10deg);
+	transform: rotate(10deg);
+}
+
+section:before {
+	content: "." attr(class);
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	z-index: 20000;
+	color: #444;
+	font-size: 10px;
+	line-height: 12px;
+	display: block;
+	text-shadow: none;
+	background: rgba(255,255,255,0.2);
+	padding: 3px;
+}
+.scrollor-above-viewport:before,
+.scrollor-bottom-visible:before {
+	top: auto;
+	bottom: 10px;
+}
