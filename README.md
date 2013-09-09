@@ -1,6 +1,8 @@
 # scrollor
 A simple [jQuery](http://jquery.com) plugin that adds classes to a set elements based on their position relative to the viewport.
 
+Example: http://carlsen.github.io/scrollor/
+
 ## Description
 The plugin automatically updates the class names of the elements every time a ```scroll``` or ```resize``` events fires. A throttle (default: 100ms) has been added to prevent excessive calls to the handler.
 
